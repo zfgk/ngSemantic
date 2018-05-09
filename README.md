@@ -4,7 +4,7 @@
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/hyperium/hyper/master/LICENSE)
 [![Support via PayPal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/ngsemantic)
 
-# Angular2 & Semantic UI
+# Angular5 & Semantic UI
 <p align="center">
   <img src="http://i.imgur.com/SCTxyan.jpg" alt="Angular 2"/><br/>
   <a href="http://www.angular.io" target="_blank">Angular2</a> - <a href="http://semantic-ui.com" target="_blank">Semantic UI</a>
