@@ -60,7 +60,7 @@ Then you can use in a component as follows:
 ```javascript
 // Module
 import { NgModule } from "@angular/core";
-import { NgSemanticModule } from "ng-semantic";
+import { NgSemanticModule } from "ng5-semantic";
 
 @NgModule({
     bootstrap:    [ AppComponent ],

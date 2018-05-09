@@ -1,6 +1,6 @@
 var path = require('path');
 var Builder = require('systemjs-builder');
-var bundleName = name = "ng-semantic";
+var bundleName = name = "ng5-semantic";
 
 var builder = new Builder();
 var config = {

@@ -19,6 +19,6 @@
     "./node_modules/@types"
   ],
   "files": [
-    "ng-semantic.ts"
+    "ng5-semantic.ts"
   ]
 }

@@ -1,6 +1,6 @@
 node_modules
 src/**/*.js
-/ng-semantic.js
+/ng5-semantic.js
 .idea
 demo/app/**/*.js
 npm-debug.log

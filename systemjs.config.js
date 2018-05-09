@@ -24,7 +24,7 @@
         // other libraries
         'rxjs': 'npm:rxjs',
         'angular2-in-memory-web-api': 'npm:angular2-in-memory-web-api',
-        'ng-semantic': './',
+        'ng5-semantic': './',
         'Prism': 'demo/vendor/prismjs'
     };
 
@@ -40,8 +40,8 @@
             main: './index.js',
             defaultExtension: 'js'
         },
-        'ng-semantic': {
-            main: './ng-semantic.js',
+        'ng5-semantic': {
+            main: './ng5-semantic.js',
             defaultExtension: 'js'
         },
         'Prism': {
