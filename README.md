@@ -6,16 +6,16 @@
 
 # Angular5 & Semantic UI
 <p align="center">
-  <img src="http://i.imgur.com/SCTxyan.jpg" alt="Angular 2"/><br/>
-  <a href="http://www.angular.io" target="_blank">Angular2</a> - <a href="http://semantic-ui.com" target="_blank">Semantic UI</a>
+  <img src="http://i.imgur.com/SCTxyan.jpg" alt="Angular"/><br/>
+  <a href="http://www.angular.io" target="_blank">Angular5</a> - <a href="http://semantic-ui.com" target="_blank">Semantic UI</a>
 </p>
 
 ## Live demo
 <a href="https://ng-semantic.herokuapp.com" target="_blank">ng-semantic.herokuapp.com</a>
 
 <ul>
-   <li>Angular 2 </li>
-   <li>Semantic UI version: 2.2.2</li>
+   <li>Angular 5 </li>
+   <li>Semantic UI version: 2.3</li>
 </ul>
 
 ## Installation
