@@ -20,7 +20,7 @@
 
 ## Installation
 ```bash
-npm install ng-semantic --save
+npm install ng5-semantic --save
 ```
 
 ## Angular CLI configuration ( Webpack )
