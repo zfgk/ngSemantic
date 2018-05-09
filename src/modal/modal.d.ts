@@ -1,4 +1,4 @@
-import { ElementRef, EventEmitter, OnDestroy } from "@angular/core";
+import { ElementRef, EventEmitter, OnDestroy } from '@angular/core';
 export declare class SemanticModalComponent implements OnDestroy {
     class: string;
     title: string;

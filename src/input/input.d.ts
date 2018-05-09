@@ -1,5 +1,5 @@
-import { ViewContainerRef, EventEmitter, OnInit } from "@angular/core";
-import { FormControl } from "@angular/forms";
+import { ViewContainerRef, EventEmitter, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 export declare class SemanticInputComponent implements OnInit {
     viewRef: ViewContainerRef;
     label: string;

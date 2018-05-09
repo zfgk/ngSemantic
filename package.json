@@ -2,7 +2,7 @@
   "name": "ng5-semantic",
   "version": "0.0.6",
   "main": "./ng5-semantic.js",
-  "description": "Angular2 building blocks based on Semantic UI",
+  "description": "Angular5 building blocks based on Semantic UI",
   "scripts": {
     "demo:lint": "tslint -c ./tslint.json 'demo/app/**/*.ts'",
     "library:lint": "tslint -c ./tslint.json 'src/**/*.ts'",
@@ -23,7 +23,7 @@
   },
   "keywords": [
     "angular",
-    "angular2",
+    "angular5",
     "semanticui",
     "semantic-ui"
   ],

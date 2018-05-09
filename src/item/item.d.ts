@@ -1,4 +1,4 @@
-import { AfterViewInit, ElementRef } from "@angular/core";
+import { AfterViewInit, ElementRef } from '@angular/core';
 export declare class SemanticItemComponent implements AfterViewInit {
     icon: string;
     header: string;

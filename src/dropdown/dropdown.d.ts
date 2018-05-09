@@ -1,4 +1,4 @@
-import { AfterViewInit, ElementRef, EventEmitter } from "@angular/core";
+import { AfterViewInit, ElementRef, EventEmitter } from '@angular/core';
 export declare class SemanticDropdownComponent implements AfterViewInit {
     class: string;
     title: string;

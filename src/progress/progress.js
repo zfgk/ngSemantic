@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var SemanticProgressComponent = (function () {
     function SemanticProgressComponent() {
@@ -20,27 +21,26 @@ var SemanticProgressComponent = (function () {
         enumerable: true,
         configurable: true
     });
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], SemanticProgressComponent.prototype, "label", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], SemanticProgressComponent.prototype, "class", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Number),
+        __metadata("design:paramtypes", [Number])
+    ], SemanticProgressComponent.prototype, "progress", null);
+    SemanticProgressComponent = __decorate([
+        core_1.Component({
+            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
+            selector: 'sm-progress',
+            template: "<div [ngClass]=\"{'success': _progress === 100}\" class=\"ui {{class}} progress\" [attr.data-percent]=\"_progress\">\n  <div class=\"bar\" [ngStyle]=\"{'width': _progress + '%'}\">\n    <div class=\"progress\">{{_progress}}%</div>\n  </div>\n  <div class=\"label\" *ngIf=\"label\">{{label}}</div>\n</div>"
+        })
+    ], SemanticProgressComponent);
     return SemanticProgressComponent;
 }());
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], SemanticProgressComponent.prototype, "label", void 0);
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], SemanticProgressComponent.prototype, "class", void 0);
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", Number),
-    __metadata("design:paramtypes", [Number])
-], SemanticProgressComponent.prototype, "progress", null);
-SemanticProgressComponent = __decorate([
-    core_1.Component({
-        changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-        selector: "sm-progress",
-        template: "<div [ngClass]=\"{'success': _progress === 100}\" class=\"ui {{class}} progress\" [attr.data-percent]=\"_progress\">\n  <div class=\"bar\" [ngStyle]=\"{'width': _progress + '%'}\">\n    <div class=\"progress\">{{_progress}}%</div>\n  </div>\n  <div class=\"label\" *ngIf=\"label\">{{label}}</div>\n</div>"
-    }),
-    __metadata("design:paramtypes", [])
-], SemanticProgressComponent);
 exports.SemanticProgressComponent = SemanticProgressComponent;
