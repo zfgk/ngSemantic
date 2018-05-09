@@ -1,6 +1,6 @@
 {
   "name": "ng5-semantic",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "./ng5-semantic.js",
   "description": "Angular2 building blocks based on Semantic UI",
   "scripts": {
