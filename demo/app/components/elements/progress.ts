@@ -1,7 +1,7 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
-    selector: "sm-page-progress",
+    selector: 'sm-page-progress',
     template: `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
@@ -15,7 +15,7 @@ import { Component } from "@angular/core";
     <h4 class="ui header">Demo</h4>
     <sm-progress [progress]="percent"></sm-progress>
     <sm-progress class="warning" [progress]="percent"></sm-progress>
-    
+
     <h4 class="ui header">Code</h4>
     <sm-codeblock smPrismjs="html">
 &lt;sm-progress [progress]="percent">&lt;/sm-progress>
@@ -33,8 +33,8 @@ import { Component } from "@angular/core";
 })
 
 export class ProgressComponent {
-    percent: number = 0;
-    indicatingPercent: number = 0;
+    percent = 0;
+    indicatingPercent = 0;
 
     constructor() {
         setInterval(() => this.percent += 10, 1000);

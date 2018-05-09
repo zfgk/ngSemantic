@@ -1,12 +1,12 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
-    selector : "sm-page-sidebar",
+    selector : 'sm-page-sidebar',
     template : `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
         <h1>Sidebar</h1>
-        <p>Semantic UI Sidebar module <i class="icon external"></i> 
+        <p>Semantic UI Sidebar module <i class="icon external"></i>
         <a href="http://semantic-ui.com/modules/sidebar.html" target="_blank">Semantic UI Sidebar</a></p>
     </div>
 </div>
@@ -15,11 +15,11 @@ import { Component } from "@angular/core";
         <a href="http://semantic-ui.com/modules/sidebar.html#/settings" target="_blank">
         http://semantic-ui.com/modules/sidebar.html#/settings
         </a>
-        
+
     <h4 class="ui header">Demo</h4>
    	<sm-button class="positive icon" icon="sidebar" (click)="invertedSidebar.show({transition: 'overlay'})">
-   	Lunch left sidebar</sm-button> 
-    <sm-sidebar class="left vertical inverted sidebar labeled icon menu" #invertedSidebar>        
+   	Lunch left sidebar</sm-button>
+    <sm-sidebar class="left vertical inverted sidebar labeled icon menu" #invertedSidebar>
         <a class="item">
             <i class="home icon"></i>
             Home
@@ -37,7 +37,7 @@ import { Component } from "@angular/core";
     <h4 class="ui header">Code</h4>
         <sm-codeblock smPrismjs="html">
 &lt;sm-button class="positive" (click)="invertedSidebar.show({{ '{' }}transition: 'overlay'{{ '}' }})">Lunch left sidebar&lt;/sm-button>
-&lt;sm-sidebar class="left vertical inverted sidebar labeled icon menu" #invertedSidebar>        
+&lt;sm-sidebar class="left vertical inverted sidebar labeled icon menu" #invertedSidebar>
     &lt;a class="item">
         &lt;i class="home icon">&lt;/i> Home
     &lt;/a>
@@ -49,13 +49,13 @@ import { Component } from "@angular/core";
     &lt;/a>
 &lt;/sm-sidebar>
     </sm-codeblock>
-    
-    <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>   
+
+    <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
     <sm-button class="" (click)="bottomSidebar.show({dimPage: false})">Lunch bottom sidebar</sm-button>
          <h4 class="ui header">Code</h4>
         <sm-codeblock smPrismjs="html">
 &lt;sm-button class="positive" (click)="bottomSidebar.show({{ '{' }}transition: 'overlay'{{ '}' }})">Lunch left sidebar&lt;/sm-button>
-&lt;sm-sidebar class="bottom inverted nine item labeled icon sidebar menu" #bottomSidebar> 
+&lt;sm-sidebar class="bottom inverted nine item labeled icon sidebar menu" #bottomSidebar>
    &lt;a class="item">
         &lt;i class="home icon">&lt;/i>
         Home
@@ -66,7 +66,7 @@ import { Component } from "@angular/core";
    &lt;/a>
 &lt;/sm-sidebar>
     </sm-codeblock>
-     <sm-sidebar class="bottom inverted nine item labeled icon sidebar menu" #bottomSidebar>        
+     <sm-sidebar class="bottom inverted nine item labeled icon sidebar menu" #bottomSidebar>
          <a class="item">
             <i class="home icon"></i>
             Home
@@ -109,5 +109,5 @@ import { Component } from "@angular/core";
 })
 
 export class SidebarComponent {
-    default: string = "test";
+    default = 'test';
 }

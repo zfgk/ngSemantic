@@ -1,8 +1,8 @@
-import { Component } from "@angular/core";
-import { Validators, FormBuilder, FormGroup } from "@angular/forms";
+import { Component } from '@angular/core';
+import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
-    selector: "sm-page-form",
+    selector: 'sm-page-form',
     template: `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
@@ -13,7 +13,7 @@ import { Validators, FormBuilder, FormGroup } from "@angular/forms";
 </div>
 <div class="main ui container">
     <h4 class="ui header">Login</h4>
-    
+
     <form class="ui form" [formGroup]="form">
 	<sm-loader [complete]="!formSubmited" class="inverted" text="Loading..."></sm-loader>
 	<div class="field">
@@ -29,7 +29,7 @@ import { Validators, FormBuilder, FormGroup } from "@angular/forms";
     </form>
     <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
-&lt;form class="ui form" [formGroup]="form"> 
+&lt;form class="ui form" [formGroup]="form">
     &lt;sm-loader [complete]="!formSubmited" class="inverted" text="Loading...">&lt;/sm-loader>
     &lt;div class="field">
 	    &lt;sm-input label="Name" [control]="form.get('nameControl')" placeholder="Enter name...">&lt;/sm-input>
@@ -85,23 +85,23 @@ import { Validators, FormBuilder, FormGroup } from "@angular/forms";
 export class FormComponent {
     form: FormGroup;
     formFeedback: FormGroup;
-    formSubmited: boolean = false;
+    formSubmited = false;
 
     constructor(fb: FormBuilder) {
         this.form = fb.group({
-            agreeControl: ["", Validators.required],
-            emailControl: ["", Validators.compose([Validators.required, Validators.minLength(4)])],
-            nameControl: ["", Validators.compose([Validators.required, Validators.minLength(4)])],
+            agreeControl: ['', Validators.required],
+            emailControl: ['', Validators.compose([Validators.required, Validators.minLength(4)])],
+            nameControl: ['', Validators.compose([Validators.required, Validators.minLength(4)])],
         });
 
         this.formFeedback = fb.group({
-            nameControl: ["", Validators.compose([Validators.required, Validators.minLength(4)])],
-            selectControl: [""],
-            textControl: ["", Validators.compose([Validators.required, Validators.minLength(10)])]
+            nameControl: ['', Validators.compose([Validators.required, Validators.minLength(4)])],
+            selectControl: [''],
+            textControl: ['', Validators.compose([Validators.required, Validators.minLength(10)])]
         });
     }
 
     submit() {
-	    this.formSubmited = true;
+      this.formSubmited = true;
     }
 }

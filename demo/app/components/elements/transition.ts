@@ -1,12 +1,12 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
-    selector : "sm-page-transition",
+    selector : 'sm-page-transition',
     template : `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
         <h1>Transition ( under construction )</h1>
-        <p>Semantic UI Transition <i class="icon external"></i> 
+        <p>Semantic UI Transition <i class="icon external"></i>
         <a href="http://semantic-ui.com/modules/transition.html" target="_blank">Semantic UI Transition</a></p>
     </div>
 </div>
@@ -27,10 +27,10 @@ import { Component } from "@angular/core";
             </card-extra>
         </sm-card>
     </sm-transition>
-    
+
     <div class="ui divider"></div>
     <sm-button (click)="transition.show('horizontal flip')">Horizontal Flip</sm-button>
-    
+
     <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
 &lt;sm-transition #transition>

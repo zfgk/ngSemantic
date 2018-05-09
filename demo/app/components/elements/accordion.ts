@@ -1,8 +1,8 @@
-import { Component } from "@angular/core";
-import { Validators, FormControl, FormBuilder, FormGroup } from "@angular/forms";
+import { Component } from '@angular/core';
+import { Validators, FormControl, FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
-    selector: "sm-page-accordion",
+    selector: 'sm-page-accordion',
     template: `
     <div class="ui masthead vertical segment">
         <div class="ui container">
@@ -12,12 +12,12 @@ import { Validators, FormControl, FormBuilder, FormGroup } from "@angular/forms"
         </div>
     </div>
     <div class="main ui container">
-    
+
         <p>Options can be passed in form of JavaScript object. Full list of settings can be found on: </p>
         <a href="http://semantic-ui.com/modules/accordion.html#/settings" target="_blank">
         http://semantic-ui.com/modules/accordion.html#/settings
         </a>
-        
+
         <h4 class="ui header">Demo ( with options )</h4>
         <sm-accordion [options]="accordionOption">
             <sm-accordion-item>
@@ -124,7 +124,7 @@ import { Validators, FormControl, FormBuilder, FormGroup } from "@angular/forms"
     <sm-accordion-item>
         <accordion-title>What is a dog?</accordion-title>
         <accordion-content>
-            A dog is a type of domesticated animal. 
+            A dog is a type of domesticated animal.
 
             <sm-accordion class="styled">
                 <sm-accordion-item>
@@ -148,7 +148,7 @@ import { Validators, FormControl, FormBuilder, FormGroup } from "@angular/forms"
             <sm-input label="Name" [control]="nameControl" placeholder="Enter name..."></sm-input>
         </div>
         <sm-accordion>
-            <sm-accordion-item>   
+            <sm-accordion-item>
                 <accordion-title>Additional</accordion-title>
                 <accordion-content>
                     <div class="field">
@@ -170,14 +170,14 @@ import { Validators, FormControl, FormBuilder, FormGroup } from "@angular/forms"
 
 export class AccordionComponent {
 
-    agreeControl: FormControl = new FormControl("", Validators.required);
-    nameControl: FormControl = new FormControl("", Validators.compose([Validators.required, Validators.minLength(4)]));
-    emailControl: FormControl = new FormControl("", Validators.compose([Validators.required, Validators.minLength(4)]));
+    agreeControl: FormControl = new FormControl('', Validators.required);
+    nameControl: FormControl = new FormControl('', Validators.compose([Validators.required, Validators.minLength(4)]));
+    emailControl: FormControl = new FormControl('', Validators.compose([Validators.required, Validators.minLength(4)]));
 
     form: FormGroup;
     accordionOption = {
         exclusive: true,
-        on: "mouseenter"
+        on: 'mouseenter'
     };
 
     constructor(fb: FormBuilder) {

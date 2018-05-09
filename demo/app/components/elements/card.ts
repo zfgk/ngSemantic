@@ -1,12 +1,12 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
-    selector : "sm-page-card",
+    selector : 'sm-page-card',
     template : `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
         <h1>Card</h1>
-        <p>Semantic UI Card view <i class="icon external"></i> 
+        <p>Semantic UI Card view <i class="icon external"></i>
         <a href="http://semantic-ui.com/views/card.html" target="_blank">Semantic UI Card</a></p>
     </div>
 </div>
@@ -25,7 +25,7 @@ import { Component } from "@angular/core";
             </a>
         </card-extra>
     </sm-card>
-    
+
     <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
 &lt;sm-card class="ui card" image="http://semantic-ui.com/images/avatar2/large/kristy.png">

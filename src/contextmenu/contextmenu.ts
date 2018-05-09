@@ -1,4 +1,4 @@
-import { Component, Input, ChangeDetectionStrategy, HostListener } from "@angular/core";
+import { Component, Input, ChangeDetectionStrategy, HostListener } from '@angular/core';
 
 /**
  * Implementation of Dropdown module on right click
@@ -7,12 +7,12 @@ import { Component, Input, ChangeDetectionStrategy, HostListener } from "@angula
  */
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: "sm-contextmenu",
+  selector: 'sm-contextmenu',
   styles: [`.sm-contextmenu { position: fixed; z-index: 1000; }`],
-  template: `<div 
+  template: `<div
 [style.left.px]="_position?.x" [style.top.px]="_position?.y"
 [ngClass]="{'active visible': show}" class="ui dropdown sm-contextmenu">
- <div 
+ <div
  [ngClass]="{'visible animating slide down in': show, 'hidden': !show}"  class="ui menu transition">
  <a (click)="menu.action()" *ngFor="let menu of items" class="item">
  <i class="{{menu.icon}} icon"></i>
@@ -24,11 +24,11 @@ import { Component, Input, ChangeDetectionStrategy, HostListener } from "@angula
 })
 export class SemanticContextMenuComponent {
   _position: { x: number, y: number } = { x: 0, y: 0 };
-  show: boolean = false;
+  show = false;
 
   @Input() items: Array<{}>;
 
-  @Input("position")
+  @Input('position')
   set position(data: { x: number, y: number }) {
     if (data) {
       this._position = data;
@@ -36,7 +36,7 @@ export class SemanticContextMenuComponent {
     }
   }
 
-  @HostListener("document:click")
+  @HostListener('document:click')
   public clickedOutside(): void {
     this.show = false;
   }

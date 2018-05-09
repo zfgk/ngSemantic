@@ -1,7 +1,7 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
-    selector: "sm-page-devicevisibility",
+    selector: 'sm-page-devicevisibility',
     template: `
     <div class="ui masthead vertical segment">
         <div class="ui container">
@@ -17,11 +17,11 @@ import { Component } from "@angular/core";
         <sm-segment class="inverted teal" smDeviceVisibility="mobile">
             <p>This segment is only visible on mobile.</p>
         </sm-segment>
-       
+
        <sm-segment class="inverted red" smDeviceVisibility="tablet">
             <p>This segment is only visible on tablet.</p>
        </sm-segment>
-       
+
        <sm-segment class="inverted orange" smDeviceVisibility="computer">
             <p>This segment is only visible on computer.</p>
        </sm-segment>
@@ -32,7 +32,7 @@ import { Component } from "@angular/core";
 &lt;/sm-segment>
 &lt;sm-segment class="inverted teal" smDeviceVisibility="tablet">
     &lt;p>This segment is only visible on mobile.&lt;/p>
-&lt;/sm-segment> 
+&lt;/sm-segment>
 &lt;sm-segment class="inverted teal" smDeviceVisibility="computer">
     &lt;p>This segment is only visible on mobile.&lt;/p>
 &lt;/sm-segment>
@@ -55,7 +55,7 @@ import { Component } from "@angular/core";
         <div smDeviceVisibility="tablet computer">
             <a sm-item href="#/elements/menu" icon="home">Home</a>
         </div>
-        
+
         <sm-menu class="menu right secondary icon" smDeviceVisibility="mobile only">
             <a sm-item icon="sidebar big" (click)="menuSidebar.show({transition: 'overlay'})"></a>
             <sm-sidebar class="right vertical inverted sidebar labeled menu icon red" #menuSidebar>
@@ -80,11 +80,11 @@ import { Component } from "@angular/core";
     &lt;div smDeviceVisibility="tablet computer">
         &lt;a sm-item href="#/elements/menu" icon="home">Home&lt;/a>
     &lt;/div>
-    
+
     &lt;sm-menu class="menu right secondary icon" smDeviceVisibility="mobile only">
-    
+
         &lt;a sm-item icon="sidebar big" (click)="mobileSidebar.show(&#123;transition: 'overlay'&#125;)">&lt;/a>
-        
+
         &lt;sm-sidebar class="right vertical inverted sidebar labeled menu icon red" #mobileSidebar>
             &lt;a class="item">
                 &lt;i class="home icon">&lt;/i> Home

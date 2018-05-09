@@ -1,7 +1,7 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
-    selector: "sm-menu-card",
+    selector: 'sm-menu-card',
     template: `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
@@ -14,11 +14,11 @@ import { Component } from "@angular/core";
     <h4 class="ui header">Demo inverted ( with sidebar )</h4>
     <sm-menu title="Angular2" class="inverted teal" logo="/demo/assets/images/semantic.png">
         <a sm-item href="#/elements/menu" *ngFor="let item of items" [icon]="item?.icon">{{item?.title}}</a>
-        
+
         <sm-menu class="menu right secondary icon">
             <a sm-item href="#/elements/menu"
             image="http://semantic-ui.com/images/avatar/small/stevie.jpg">Elliot Fu</a>
-        
+
             <a sm-item icon="sidebar big" (click)="menuSidebar.show({transition: 'overlay'})"></a>
             <sm-sidebar class="right vertical inverted sidebar labeled menu teal huge" #menuSidebar>
                 <a class="item">
@@ -43,7 +43,7 @@ import { Component } from "@angular/core";
     &lt;a sm-item *ngFor="let item of items" [icon]="item.icon">{{'{'}}{{'{'}}item?.title{{'}'}}{{'}'}}&lt;/a>
 
     &lt;sm-menu class="menu right secondary">
-        &lt;a sm-item href="#/elements/menu" 
+        &lt;a sm-item href="#/elements/menu"
             image="http://semantic-ui.com/images/avatar/small/stevie.jpg">Elliot Fu&lt;/a>
         &lt;a sm-item icon="sidebar big">&lt;/a>
     &lt;/sm-menu>
@@ -55,20 +55,20 @@ import { Component } from "@angular/core";
     <sm-menu title="" class="three item">
         <a sm-item *ngFor="let item of ['Editorials', 'Reviews', 'Upcoming Events']">{{item}}</a>
     </sm-menu>
-    
+
     <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
     <h4 class="ui header">Demo pointing</h4>
     <sm-menu class="three item pointing">
-        <a sm-item *ngFor="let item of ['Editorials', 'Reviews', 'Upcoming Events']; let i = index" 
+        <a sm-item *ngFor="let item of ['Editorials', 'Reviews', 'Upcoming Events']; let i = index"
         [ngClass]="{'active': i == 1}" >{{item}}</a>
     </sm-menu>
-    
+
     <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
     <h4 class="ui header">Labeled fluid icon menu</h4>
     <sm-menu title="Labeled Icon" class="fluid four item labeled icon inverted blue">
         <a sm-item *ngFor="let item of labeledIcons" [icon]="item?.icon">{{item?.title}}</a>
-    </sm-menu>    
-    
+    </sm-menu>
+
     <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
     <h4 class="ui header">Demo vertical</h4>
     <sm-menu title="Vertical" class="vertical">
@@ -112,7 +112,7 @@ import { Component } from "@angular/core";
       </td>
       <td>List of CSS classes associated with menu element.</td>
     </tr>
-    
+
     <tr>
       <td>
         <i class="arrow circle down icon"></i> [logoClass]
@@ -137,29 +137,29 @@ export class MenuComponent {
 
     constructor() {
         this.items = [{
-            "title": "Home",
-            "link": "Home",
-            "icon": "home"
+            'title': 'Home',
+            'link': 'Home',
+            'icon': 'home'
         }, {
-                "title": "About Us",
-                "link": "#/"
+                'title': 'About Us',
+                'link': '#/'
             }, {
-                "title": "Contact",
-                "link": "#/"
+                'title': 'Contact',
+                'link': '#/'
             }];
 
         this.labeledIcons = [{
-            "title": "Games",
-            "link": "Home",
-            "icon": "gamepad"
+            'title': 'Games',
+            'link': 'Home',
+            'icon': 'gamepad'
         }, {
-                "title": "Chanel",
-                "link": "Chanel",
-                "icon": "video camera"
+                'title': 'Chanel',
+                'link': 'Chanel',
+                'icon': 'video camera'
             }, {
-                "title": "Videos",
-                "link": "Videos",
-                "icon": "video play"
+                'title': 'Videos',
+                'link': 'Videos',
+                'icon': 'video play'
             }];
 
     }

@@ -1,12 +1,12 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
-    selector : "sm-page-modal",
+    selector : 'sm-page-modal',
     template : `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
         <h1>Modal</h1>
-        <p>Semantic UI Modal module <i class="icon external"></i> 
+        <p>Semantic UI Modal module <i class="icon external"></i>
         <a href="http://semantic-ui.com/modules/modal.html" target="_blank">Semantic UI Modal</a></p>
     </div>
 </div>
@@ -20,15 +20,15 @@ import { Component } from "@angular/core";
     <button class="ui button green" (click)="myModal.show()">Click me</button>
     <sm-modal title="Hello from Modal" class="basic" #myModal>
         <modal-content>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
             and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         </modal-content>
     </sm-modal>
-    
+
     <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
 &lt;button class="ui button green" (click)="myModal.show()">Click me&lt;/button>
@@ -45,7 +45,7 @@ import { Component } from "@angular/core";
         <modal-content>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
         </modal-content>
-    
+
         <modal-actions>
             <div class="ui buttons">
                 <div class="ui button primary" (click)="myModalNormal.hide()">Close modal</div>
@@ -73,7 +73,7 @@ import { Component } from "@angular/core";
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
         </modal-content>
     </sm-modal>
-    
+
     <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
 <h4 class="ui header">Options</h4>
 <table class="ui celled striped table">

@@ -1,7 +1,7 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
-    selector: "sm-page-dropdown",
+    selector: 'sm-page-dropdown',
     template: `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
@@ -124,7 +124,7 @@ import { Component } from "@angular/core";
 
 export class DropdownComponent {
     multipleData = [];
-    cities: Array<string> = ["New York", "Belgrade", "Stockholm", "Sarajevo"];
+    cities: Array<string> = ['New York', 'Belgrade', 'Stockholm', 'Sarajevo'];
 
     onChange(data: {}) {
         console.log(data);

@@ -1,7 +1,7 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
-    selector: "sm-page-dimmer",
+    selector: 'sm-page-dimmer',
     template: `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
@@ -23,7 +23,7 @@ import { Component } from "@angular/core";
         </div>
     </sm-dimmer>
     <sm-button (click)="dimmer.show({opacity: .7, transition: 'slide up'})" class="primary">Page dimmer</sm-button>
-    
+
     <h4 class="ui header">Code</h4>
     <sm-codeblock smPrismjs="html">
 &lt;sm-dimmer #dimmer>

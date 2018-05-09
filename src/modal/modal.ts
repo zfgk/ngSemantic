@@ -1,7 +1,7 @@
 import {
   Component, Input, ChangeDetectionStrategy, ViewChild, ElementRef, Directive, Output,
   EventEmitter, OnDestroy
-} from "@angular/core";
+} from '@angular/core';
 
 declare var jQuery: any;
 
@@ -12,7 +12,7 @@ declare var jQuery: any;
  */
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: "sm-modal",
+  selector: 'sm-modal',
   template: `<div class="ui modal {{class}}" #modal>
     <i class="close icon"></i>
     <div [ngClass]="{'icon': icon}" class="ui header">
@@ -31,21 +31,21 @@ export class SemanticModalComponent implements OnDestroy {
   @Input() class: string;
   @Input() title: string;
   @Input() icon: string;
-  @ViewChild("modal") modal: ElementRef;
+  @ViewChild('modal') modal: ElementRef;
   @Output() onModalShow: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Output() onModalHide: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   show(data?: {}) {
     jQuery(this.modal.nativeElement)
       .modal(data || {})
-      .modal("toggle");
+      .modal('toggle');
 
     this.onModalShow.next(true);
   }
 
   hide() {
     jQuery(this.modal.nativeElement)
-      .modal("hide");
+      .modal('hide');
 
     this.onModalHide.emit(true);
   }

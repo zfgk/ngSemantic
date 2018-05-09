@@ -1,9 +1,9 @@
-import { Component } from "@angular/core";
-import { DataServices } from "../../services/data";
+import { Component } from '@angular/core';
+import { DataServices } from '../../services/data';
 
 @Component({
     providers: [DataServices],
-    selector : "sm-page-segment",
+    selector : 'sm-page-segment',
     template : `
 	<div class="ui masthead vertical segment">
     <div class="ui container">

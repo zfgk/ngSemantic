@@ -1,40 +1,41 @@
-import { Pipe, PipeTransform } from "@angular/core";
-import { Http } from "@angular/http";
+import {Pipe, PipeTransform} from '@angular/core';
+import {Http} from '@angular/http';
 
 @Pipe({
-	name: "smFetch",
-	pure: false
+  name: 'smFetch',
+  pure: false
 })
-export class FetchJsonPipe  implements PipeTransform {
-	private fetchedJson: any = null;
-	private prevUrl = "";
+export class FetchJsonPipe implements PipeTransform {
+  private fetchedJson: any = null;
+  private prevUrl = '';
 
-	constructor(private _http: Http) {}
+  constructor(private _http: Http) {
+  }
 
-	transform(url: string): any {
+  transform(url: string): any {
 
-		if (url !== this.prevUrl) {
-			this.prevUrl = url;
-			this.fetchedJson = null;
+    if (url !== this.prevUrl) {
+      this.prevUrl = url;
+      this.fetchedJson = null;
 
-			this._http.get(url)
-				.map(result => result.json())
-				.subscribe( result => this.fetchedJson = result );
-		}
+      this._http.get(url)
+        .map(result => result.json())
+        .subscribe(result => this.fetchedJson = result);
+    }
 
-		return this.fetchedJson;
-	}
+    return this.fetchedJson;
+  }
 }
 
 @Pipe({
-	name: "smArraySearch"
+  name: 'smArraySearch'
 })
 export class SearchArrayPipe implements PipeTransform {
-	transform(list: Array<{}>, search: string): Array<{}> {
-		if (!list || !search) {
-			return list;
-		}
+  transform(list: Array<{}>, search: string): Array<{}> {
+    if (!list || !search) {
+      return list;
+    }
 
-		return list.filter((item: { name: string}) => !!item.name.toLowerCase().match(new RegExp(search.toLowerCase())));
-	}
+    return list.filter((item: { name: string }) => !!item.name.toLowerCase().match(new RegExp(search.toLowerCase())));
+  }
 }

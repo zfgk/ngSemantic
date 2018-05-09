@@ -1,10 +1,10 @@
-import { Component, Type, Renderer, ElementRef, ViewChild, AfterViewInit } from "@angular/core";
-import { IContextMenu } from "../../services/contextmenu";
+import { Component, Type, Renderer, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { IContextMenu } from '../../services/contextmenu';
 
 declare var jQuery: any;
 
 @Component({
-    selector: "sm-page-contextmenu",
+    selector: 'sm-page-contextmenu',
     styles: [`.full { height: 500px; border: 1px dashed gray }`],
     template: `
     <div class="ui masthead vertical segment">
@@ -34,36 +34,36 @@ export class ContextmenuComponent implements AfterViewInit {
 
     menuPosition: { x: number, y: number };
     menuItems: Array<IContextMenu> = [];
-    @ViewChild("query") query: ElementRef;
+    @ViewChild('query') query: ElementRef;
 
     constructor(public renderer: Renderer) {
 
         this.menuItems = [...this.menuItems, {
-            action: (): void => { location.assign("/#/elements/accordion"); },
-            icon: "home",
+            action: (): void => { location.assign('/#/elements/accordion'); },
+            icon: 'home',
             method: 1,
-            title: "Go to Accordion Page",
+            title: 'Go to Accordion Page',
         }];
 
         this.menuItems = [...this.menuItems, {
             action: (): void => { location.reload(); },
-            icon: "refresh",
+            icon: 'refresh',
             method: 1,
-            title: "Refresh window"
+            title: 'Refresh window'
         }];
 
         this.menuItems = [...this.menuItems, {
-            action: (): void => { jQuery(".ui.modal.modal")
-                .modal("toggle"); },
-            icon: "browser",
+            action: (): void => { jQuery('.ui.modal.modal')
+                .modal('toggle'); },
+            icon: 'browser',
             method: 1,
-            title: "Open modal Window"
+            title: 'Open modal Window'
         }];
     }
 
     ngAfterViewInit(): void {
 
-        this.renderer.listen(this.query.nativeElement, "contextmenu", (event: MouseEvent): void => {
+        this.renderer.listen(this.query.nativeElement, 'contextmenu', (event: MouseEvent): void => {
 
             this.menuPosition = { x: event.clientX, y: event.clientY };
 

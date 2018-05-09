@@ -1,7 +1,7 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
-    selector: "sm-page-flag",
+    selector: 'sm-page-flag',
     template: `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
@@ -16,14 +16,14 @@ import { Component } from "@angular/core";
     <sm-flag flag="serbia"></sm-flag>
     <sm-flag flag="bosnia"></sm-flag>
     <sm-flag flag="argentina"></sm-flag>
-    
+
     <h4 class="ui header">Code</h4>
     <sm-codeblock smPrismjs="html">
 &lt;sm-flag flag="serbia">&lt;/sm-flag>
 &lt;sm-flag flag="bosnia">&lt;/sm-flag>
 &lt;sm-flag flag="argentina">&lt;/sm-flag>
 </sm-codeblock>
-      
+
 </div>
 `
 })

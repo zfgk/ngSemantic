@@ -1,14 +1,14 @@
-import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter, AfterViewInit } from "@angular/core";
-import { FormControl } from "@angular/forms";
-import "rxjs/add/operator/debounceTime";
-import "rxjs/add/operator/distinctUntilChanged";
+import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter, AfterViewInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import 'rxjs/add/operator/debounceTime';
+import 'rxjs/add/operator/distinctUntilChanged';
 
 /**
  * <sm-search placeholder="Search..." (onSearch)="element.innerText = $event" ></sm-search>
  */
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: "sm-search",
+  selector: 'sm-search',
   template: `<div class="ui search" [ngClass]="{'loading': loading}">
  <div class="ui icon input {{class}} ">
   <input class="prompt" [formControl]="searchControl" type="text" [attr.placeholder]="placeholder">
@@ -21,7 +21,7 @@ export class SemanticSearchComponent implements AfterViewInit {
   @Input() class: string;
   @Input() icon: boolean;
   @Input() loading: boolean;
-  @Input() debounce: number = 0;
+  @Input() debounce = 0;
   @Input() placeholder: string;
   @Output() onSearch: EventEmitter<string|number> = new EventEmitter<string|number>();
   searchControl: FormControl = new FormControl();

@@ -1,10 +1,10 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
-import { MessageService } from "../../services/message";
+import { MessageService } from '../../services/message';
 
 @Component({
   providers: [MessageService],
-  selector: "sm-page-message",
+  selector: 'sm-page-message',
   template: `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
@@ -23,7 +23,7 @@ import { MessageService } from "../../services/message";
             We just updated our privacy policy here to better service our customers. We recommend reviewing the changes.
         </message-content>
     </sm-message>
-    
+
     <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
 &lt;sm-message icon="warning">
@@ -101,12 +101,12 @@ export class MessageComponent {
 
     messages: Array<string> = [];
     duration: number;
-    private LENGTH: number = 5000;
+    private LENGTH = 5000;
 
     constructor(public ms: MessageService) {
         ms._rx.subscribe((data: any) => {
 
-            if (typeof data === "string") {
+            if (typeof data === 'string') {
             data = {
               text: data
             };

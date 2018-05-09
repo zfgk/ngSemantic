@@ -1,8 +1,8 @@
-import { Component } from "@angular/core";
-import { FormControl } from "@angular/forms";
+import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
-    selector: "sm-page-checkbox",
+    selector: 'sm-page-checkbox',
     template: `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
@@ -13,26 +13,26 @@ import { FormControl } from "@angular/forms";
 </div>
 <div class="main ui container">
     <h4 class="ui header">Demo</h4>
-    
+
     <sm-checkbox label="Make my profile visible" [control]="checkboxControl"></sm-checkbox>
     <p>Value: {{checkboxControl.value}}</p>
-    
+
     <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
 &lt;sm-checkbox label="Make my profile visible" [control]="checkboxControl">&lt;/sm-checkbox>
 </sm-codeblock>
     <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
     <h4 class="ui header">Demo radio</h4>
-    
+
     <sm-checkbox label="Radio choice" [control]="radioControl" type="radio"></sm-checkbox>
 
       <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
 &lt;sm-checkbox label="Radio choice" [control]="radioControl" type="radio">&lt;/sm-checkbox>
-</sm-codeblock>  
+</sm-codeblock>
     <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
     <h4 class="ui header">Demo slider</h4>
-    
+
     <sm-checkbox label="Accept terms and conditions" [control]="sliderControl" type="slider"></sm-checkbox>
 
 <sm-codeblock smPrismjs="html">
@@ -41,17 +41,17 @@ import { FormControl } from "@angular/forms";
 
 <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
     <h4 class="ui header">Demo toggle</h4>
-    
+
     <sm-checkbox label="Subscribe to weekly newsletter" [control]="toggleControl" type="toggle"></sm-checkbox>
 
 <sm-codeblock smPrismjs="html">
 &lt;sm-checkbox label="Subscribe to weekly newsletter" [control]="toggleControl" type="toggle">&lt;/sm-checkbox>
-</sm-codeblock> 
+</sm-codeblock>
     <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
     <h4 class="ui header">Demo disabled</h4>
-    
+
     <sm-checkbox label="Make my profile visible" [control]="checkboxControl" [disabled]="true"></sm-checkbox>
-    
+
     <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
 &lt;sm-checkbox label="Make my profile visible" [control]="checkboxControl" [disabled]="true">&lt;/sm-checkbox>
@@ -76,7 +76,7 @@ import { FormControl } from "@angular/forms";
     &lt;sm-checkbox label="3 option" [control]="formRadioControl" type="radio" name="colors" value="3">&lt;/sm-checkbox>
   &lt;/div>
 &lt;/div>
-</sm-codeblock> 
+</sm-codeblock>
 </div>
 `
 })

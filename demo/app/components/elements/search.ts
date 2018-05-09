@@ -1,7 +1,7 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
-    selector: "sm-page-search",
+    selector: 'sm-page-search',
     template: `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
@@ -17,8 +17,8 @@ import { Component } from "@angular/core";
     <h4 class="ui header">Code</h4>
     <sm-codeblock smPrismjs="html">
 &lt;sm-search placeholder="Search..." (onSearch)="element.innerText = $event" >&lt;/sm-search>
-</sm-codeblock>      
-                                                                   
+</sm-codeblock>
+
 <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
 
     <h4 class="ui header">Demo icon</h4>
@@ -26,7 +26,7 @@ import { Component } from "@angular/core";
     <div #elementIcon></div>
     <h4 class="ui header">Code</h4>
     <sm-codeblock smPrismjs="html">
-&lt;sm-search placeholder="Search..." (onSearch)="elementIcon.innerText = $event" [icon]="true" 
+&lt;sm-search placeholder="Search..." (onSearch)="elementIcon.innerText = $event" [icon]="true"
 class="fluid" [debounce]="500">&lt;/sm-search>
 </sm-codeblock>
 

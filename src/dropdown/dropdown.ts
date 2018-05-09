@@ -1,12 +1,12 @@
 import {
   Component, ChangeDetectionStrategy, Input, AfterViewInit, ViewChild, ElementRef, Output, EventEmitter
-} from "@angular/core";
+} from '@angular/core';
 
 declare var jQuery: any;
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: "sm-dropdown",
+  selector: 'sm-dropdown',
   template: `
     <div class="ui {{class}} dropdown item" #dropdown>
         <i *ngIf="icon" class="{{icon}} icon"></i>
@@ -25,7 +25,7 @@ export class SemanticDropdownComponent implements AfterViewInit {
   @Input() items: Array<{}>;
   @Input() options: {} = {};
   @Output() onChange: EventEmitter<string|number> = new EventEmitter<string|number>();
-  @ViewChild("dropdown") dropdown: ElementRef;
+  @ViewChild('dropdown') dropdown: ElementRef;
 
   ngAfterViewInit(): void {
 

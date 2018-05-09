@@ -1,8 +1,8 @@
-import { Component } from "@angular/core";
-import { FormControl, Validators } from "@angular/forms";
+import { Component } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
-    selector: "sm-page-select",
+    selector: 'sm-page-select',
     template: `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
@@ -32,7 +32,7 @@ import { FormControl, Validators } from "@angular/forms";
     <h4 class="ui header">Multiple</h4>
     <p><i>Wrapped in 'ui form' for validation.</i></p>
     <div class="ui form">
-    <sm-select [options]="{direction: 'upward', transition: 'vertical flip'}" [control]="multipleControl" placeholder="Select multiple..." 
+    <sm-select [options]="{direction: 'upward', transition: 'vertical flip'}" [control]="multipleControl" placeholder="Select multiple..."
     class="fluid search multiple" (onChange)="onMultiple($event)">
         <option *ngFor="let city of cities">{{city}}</option>
     </sm-select>
@@ -43,7 +43,7 @@ import { FormControl, Validators } from "@angular/forms";
 &lt;sm-select
     [options]="{{'{'}}direction: 'upward', transition: 'vertical flip'{{'}'}}"
     [control]="selectControl"
-    placeholder="Select multiple..." 
+    placeholder="Select multiple..."
     class="fluid search multiple"
     (onChange)="onMultiple($event)">
     &lt;option *ngFor="let city of cities">{{'{'}}{{'{'}}city{{'}'}}{{'}'}}&lt;/option>
@@ -54,7 +54,7 @@ import { FormControl, Validators } from "@angular/forms";
 <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
 <h4 class="ui header">With two way data binding</h4>
 
-    <sm-select 
+    <sm-select
     [options]="{direction: 'upward'}"
     [(model)]="userModel.gender" placeholder="Select gender..."
     class="fluid">
@@ -67,8 +67,8 @@ import { FormControl, Validators } from "@angular/forms";
 <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
 &lt;sm-select
-    [options]="{{'{'}}direction: 'upward'{{'}'}}" 
-    [(model)]="userModel.gender" placeholder="Select gender..." 
+    [options]="{{'{'}}direction: 'upward'{{'}'}}"
+    [(model)]="userModel.gender" placeholder="Select gender..."
     class="fluid">
     &lt;option value="m">&lt;i class="icon male">&lt;/i> Male&lt;/option>
     &lt;option value="f">&lt;i class="icon female">&lt;/i> Female&lt;/option>
@@ -78,7 +78,7 @@ import { FormControl, Validators } from "@angular/forms";
 <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
 <h4 class="ui header">Disable Select</h4>
 
-<sm-select 
+<sm-select
     [options]="{direction: 'upward'}"
     [(model)]="selection" placeholder="Select gender..."
     [disabled]="selectDisabled"
@@ -88,8 +88,8 @@ import { FormControl, Validators } from "@angular/forms";
 </sm-select>
 <input type="checkbox" [(ngModel)]="selectDisabled">
 <sm-codeblock smPrismjs="html">
-    &lt;sm-select 
-    [options]="{{'{'}}direction: 'upward'{{'}'}}" 
+    &lt;sm-select
+    [options]="{{'{'}}direction: 'upward'{{'}'}}"
     [(model)]="selection" placeholder="Select gender..."
     [disabled]="selectDisabled"
     class="fluid">
@@ -97,11 +97,11 @@ import { FormControl, Validators } from "@angular/forms";
         &lt;option value="f">&lt;i class="icon female">&lt;/i> Female&lt;/option>
     &lt;/sm-select>
 </sm-codeblock>
- 
+
 <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
 <h4 class="ui header">Async loading</h4>
 
-<sm-select 
+<sm-select
     [options]="{direction: 'upward'}"
     [(model)]="selection" placeholder="Select gender..."
     class="fluid">
@@ -145,7 +145,7 @@ import { FormControl, Validators } from "@angular/forms";
       <td>
         <i class="arrow circle down icon"></i> [options]
       </td>
-      <td>Semantic UI options object for Dropdown element: 
+      <td>Semantic UI options object for Dropdown element:
       <a href="http://semantic-ui.com/modules/dropdown.html#/settings"
        target="_blank"><i class="icon external"></i></a>
        </td>
@@ -170,17 +170,17 @@ import { FormControl, Validators } from "@angular/forms";
 </div>`
 })
 export class SelectComponent {
-    selectControl: FormControl = new FormControl("");
-    multipleControl: FormControl = new FormControl("", Validators.required);
+    selectControl: FormControl = new FormControl('');
+    multipleControl: FormControl = new FormControl('', Validators.required);
     multipleData = [];
     selectDisabled = true;
 
     userModel = {
-        gender: "m",
-        name: "John Doe"
+        gender: 'm',
+        name: 'John Doe'
     };
-    selection: string = "";
-    cities: Array<string> = ["New York", "Belgrade", "Stockholm", "Sarajevo"];
+    selection = '';
+    cities: Array<string> = ['New York', 'Belgrade', 'Stockholm', 'Sarajevo'];
 
     onMultiple(data: Array<string>): void {
         this.multipleData = data;

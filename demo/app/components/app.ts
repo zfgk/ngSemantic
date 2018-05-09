@@ -1,23 +1,24 @@
-import { Component, enableProdMode, AfterViewInit, ViewChild, ElementRef, Renderer } from "@angular/core";
+import {Component, enableProdMode, AfterViewInit, ViewChild, ElementRef, Renderer} from '@angular/core';
 
 enableProdMode();
 
 @Component({
-	selector: "sm-app",
-	templateUrl: "/demo/app/components/app.html"
+  selector: 'sm-app',
+  templateUrl: '/demo/app/components/app.html'
 })
 export class AppComponent implements AfterViewInit {
 
-	@ViewChild("leftSidebar") leftSidebar: ElementRef;
+  @ViewChild('leftSidebar') leftSidebar: ElementRef;
 
-	constructor(public renderer: Renderer) {}
+  constructor(public renderer: Renderer) {
+  }
 
-	ngAfterViewInit() {
-		this.setFullHeight();
-		window.onresize = (): any => this.setFullHeight();
-	}
+  ngAfterViewInit() {
+    this.setFullHeight();
+    window.onresize = (): any => this.setFullHeight();
+  }
 
-	setFullHeight(): void {
-		this.renderer.setElementStyle(this.leftSidebar.nativeElement, "height", jQuery(window).height() + "px");
-	}
+  setFullHeight(): void {
+    this.renderer.setElementStyle(this.leftSidebar.nativeElement, 'height', jQuery(window).height() + 'px');
+  }
 }

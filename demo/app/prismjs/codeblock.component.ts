@@ -1,7 +1,7 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
-    selector: "sm-codeblock",
+    selector: 'sm-codeblock',
     template: `<pre><ng-content></ng-content></pre>`
 })
 export class CodeblockComponent {}
