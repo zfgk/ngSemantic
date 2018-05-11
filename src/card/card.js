@@ -25,7 +25,7 @@ var SemanticCardComponent = (function () {
         core_1.Component({
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
             selector: 'sm-card',
-            template: "<div class=\"ui {{class}}\">\n<div class=\"image\" *ngIf=\"image\">\n    <img src=\"{{image}}\">\n  </div>\n  <div class=\"content\">\n    <ng-content select=\"card-title\"></ng-content>\n    <div class=\"meta\">\n      <ng-content select=\"card-subtitle\"></ng-content>\n    </div>\n    <div class=\"description\">\n      <ng-content select=\"card-content\"></ng-content>\n    </div>\n  </div>\n  <div class=\"extra content\">\n    <ng-content select=\"card-extra\"></ng-content>\n  </div>\n  <ng-content></ng-content>\n</div>"
+            template: "<div class=\"ui {{class}}\">\n    <div class=\"image\" *ngIf=\"image\">\n        <img src=\"{{image}}\">\n    </div>\n    <div class=\"content\">\n        <ng-content select=\"card-title\"></ng-content>\n        <div class=\"meta\">\n            <ng-content select=\"card-subtitle\"></ng-content>\n        </div>\n        <div class=\"description\">\n            <ng-content select=\"card-content\"></ng-content>\n        </div>\n    </div>\n    <div class=\"extra content\">\n        <ng-content select=\"card-extra\"></ng-content>\n    </div>\n    <ng-content></ng-content>\n</div>"
         })
     ], SemanticCardComponent);
     return SemanticCardComponent;
@@ -48,3 +48,40 @@ var SemanticCardsComponent = (function () {
     return SemanticCardsComponent;
 }());
 exports.SemanticCardsComponent = SemanticCardsComponent;
+var SemanticCard5Component = (function () {
+    function SemanticCard5Component() {
+    }
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], SemanticCard5Component.prototype, "class", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], SemanticCard5Component.prototype, "image", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], SemanticCard5Component.prototype, "title", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], SemanticCard5Component.prototype, "subtitle", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], SemanticCard5Component.prototype, "content", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], SemanticCard5Component.prototype, "extra", void 0);
+    SemanticCard5Component = __decorate([
+        core_1.Component({
+            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
+            selector: 'sm-card5',
+            template: "<div class=\"ui {{class}}\">\n    <div class=\"image\" *ngIf=\"image\">\n        <img [src]=\"image\">\n    </div>\n    <div class=\"content\">\n        <div *ngIf=\"title\" [innerHtml]=\"title\"></div>\n        <div class=\"meta\" *ngIf=\"subtitle\" [innerHtml]=\"subtitle\">\n        </div>\n        <div class=\"description\" *ngIf=\"content\" [innerHtml]=\"content\">\n        </div>\n    </div>\n    <div class=\"extra content\" *ngIf=\"extra\" [innerHtml]=\"extra\">\n    </div>\n</div>"
+        })
+    ], SemanticCard5Component);
+    return SemanticCard5Component;
+}());
+exports.SemanticCard5Component = SemanticCard5Component;

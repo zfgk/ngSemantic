@@ -11,6 +11,14 @@ import { Component } from '@angular/core';
     </div>
 </div>
 <div class="main ui container">
+    <h4 class="ui header">card5</h4>
+    <sm-card5 class="card" 
+    image="{{image}}"
+    title="{{title}}" 
+    subtitle="{{subtitle}}" 
+    content="{{content}}"
+    extra="{{extra}}"></sm-card5>
+    
     <h4 class="ui header">Demo</h4>
     <sm-card class="card" image="http://semantic-ui.com/images/avatar2/large/kristy.png">
         <card-title> Kristy </card-title>
@@ -107,4 +115,10 @@ import { Component } from '@angular/core';
 `
 })
 
-export class CardComponent {}
+export class CardComponent {
+  title = 'angular5';
+  subtitle = 'angular5 is better';
+  content = '<a href="http://www.baidu.com">百毒一下，百毒都侵</a>';
+  extra = '<sm-button>赞</sm-button>';
+  image = 'http://semantic-ui.com/images/avatar2/large/kristy.png';
+}
