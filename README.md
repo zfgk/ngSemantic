@@ -1,8 +1,4 @@
-[![GitHub version](https://badge.fury.io/gh/vladotesanovic%2FngSemantic.png)](http://badge.fury.io/gh/vladotesanovic%2FngSemantic)
-[![Dependency Status](https://david-dm.org/vladotesanovic/ngSemantic.svg)](https://david-dm.org/vladotesanovic/ngSemantic)
-[![Build Status](https://travis-ci.org/vladotesanovic/ngSemantic.svg?branch=master)](https://travis-ci.org/vladotesanovic/ngSemantic)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/hyperium/hyper/master/LICENSE)
-[![Support via PayPal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/ngsemantic)
 
 # Angular5 & Semantic UI
 <p align="center">
@@ -10,12 +6,14 @@
   <a href="http://www.angular.io" target="_blank">Angular5</a> - <a href="http://semantic-ui.com" target="_blank">Semantic UI</a>
 </p>
 
-## Live demo
+## <Forked from https://github.com/vladotesanovic/ngSemantic.git, make it supporting Angular 5>
+
+## Live demo (original demo based on Angular 2)
 <a href="https://ng-semantic.herokuapp.com" target="_blank">ng-semantic.herokuapp.com</a>
 
 <ul>
-   <li>Angular 5 </li>
-   <li>Semantic UI version: 2.3</li>
+   <li>Angular 2 </li>
+   <li>Semantic UI version demo based on: 2.3</li2>
 </ul>
 
 ## Installation
@@ -93,22 +91,10 @@ Semantic UI ( minified versions of css and js ) must be loaded in index.html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.js"></script>
 ```
 
-## Support / Donations
-
-If you’d like to support me developing this project you’re able to do so by donating on PayPal or if you have any special needs/ feature requests don’t hesitate to send me an email.
-
-[![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://www.paypal.me/ngsemantic)
-
-####  Angular 2 QuickStart with ngSemantic
-https://github.com/vladotesanovic/angular2-quickstart-ngsemantic
-
-####  Angular 2 CLI with ngSemantic
-https://github.com/vladotesanovic/angular2-cli-webpack
-
 ### Development
 ```bash
-git clone https://github.com/vladotesanovic/ngSemantic.git
-cd ngSemantic
+git clone https://github.com/zfgk/ngSemanticUI.git
+cd ngSemanticUI
 
 # install dependencies
 npm install

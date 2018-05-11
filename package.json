@@ -1,6 +1,6 @@
 {
   "name": "ng5-semantic",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "main": "./ng5-semantic.js",
   "description": "Angular5 building blocks based on Semantic UI",
   "scripts": {
@@ -29,7 +29,7 @@
   ],
   "author": "Vlado Tešanović",
   "bugs": {
-    "url": "https://github.com/vladotesanovic/ngSemantic/issues"
+    "url": "https://github.com/zfgk/ngSemanticUI/issues"
   },
   "typings": "./ng5-semantic.d.ts",
   "homepage": "https://ng-semantic.herokuapp.com/",
