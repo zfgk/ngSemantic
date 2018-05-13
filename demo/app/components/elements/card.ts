@@ -9,16 +9,14 @@ import { Component } from '@angular/core';
         <p>Semantic UI Card view <i class="icon external"></i>
         <a href="http://semantic-ui.com/views/card.html" target="_blank">Semantic UI Card</a></p>
     </div>
-</div>
+  </div>
 <div class="main ui container">
     <h4 class="ui header">card5</h4>
-    <sm-card5 class="card" 
-    image="{{image}}"
-    title="{{title}}" 
-    subtitle="{{subtitle}}" 
-    content="{{content}}"
-    extra="{{extra}}"></sm-card5>
-    
+    <!--<sm-card5 class="card" image="{{image}}"-->
+    <!--title="{{title}}" -->
+    <!--subtitle="{{subtitle}}" -->
+    <!--content="{{content}}"-->
+    <!--extra="{{extra}}"></sm-card5>-->
     <h4 class="ui header">Demo</h4>
     <sm-card class="card" image="http://semantic-ui.com/images/avatar2/large/kristy.png">
         <card-title> Kristy </card-title>
