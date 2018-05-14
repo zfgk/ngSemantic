@@ -11,12 +11,8 @@ import { Component } from '@angular/core';
     </div>
   </div>
 <div class="main ui container">
-    <h4 class="ui header">card5</h4>
-    <!--<sm-card5 class="card" image="{{image}}"-->
-    <!--title="{{title}}" -->
-    <!--subtitle="{{subtitle}}" -->
-    <!--content="{{content}}"-->
-    <!--extra="{{extra}}"></sm-card5>-->
+
+
     <h4 class="ui header">Demo</h4>
     <sm-card class="card" image="http://semantic-ui.com/images/avatar2/large/kristy.png">
         <card-title> Kristy </card-title>
@@ -101,6 +97,19 @@ import { Component } from '@angular/core';
 </sm-codeblock>
 <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
 <h4 class="ui header">Demo attached button without image</h4>
+<sm-cards>
+    <div class="card">
+    <sm-card-ext >
+            <card-title> Kristy </card-title>
+            <card-subtitle> Joined in 2013 </card-subtitle>
+            <card-content>
+                Kristy is an art director living in New York.
+            </card-content>
+            <sm-button class="bottom attached fluid" icon="add">Add friend</sm-button>
+
+    </sm-card-ext>
+</div>
+
     <sm-card class="card">
         <card-title> Kristy </card-title>
         <card-subtitle> Joined in 2013 </card-subtitle>
@@ -109,6 +118,80 @@ import { Component } from '@angular/core';
         </card-content>
         <sm-button class="bottom attached fluid" icon="add">Add friend</sm-button>
     </sm-card>
+</sm-cards>
+<!--</div>-->
+<h4 class="ui header">Code</h4>
+<sm-codeblock smPrismjs="html">
+    &lt;sm-card class="card">
+        &lt;card-title> Kristy &lt;/card-title>
+        &lt;card-subtitle> Joined in 2013 &lt;/card-subtitle>
+        &lt;card-content>
+            Kristy is an art director living in New York.
+        &lt;/card-content>
+        &lt;sm-button class="bottom attached fluid" icon="add">Add friend&lt;/sm-button>
+    &lt;/sm-card>
+</sm-codeblock>
+<div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
+<h4 class="ui header">Demo sm-card-double-image</h4>
+  <sm-card-double-image class="card" 
+      image="http://semantic-ui.com/images/avatar2/large/kristy.png" 
+      hoverImage="http://www.semantic-ui.cn/images/avatar/large/elliot.jpg">
+        <card-title> Kristy </card-title>
+        <card-subtitle> Joined in 2013 </card-subtitle>
+        <card-content>
+            Kristy is an art director living in New York.
+        </card-content>
+        <card-extra>
+            <a>
+                <i class="user icon"></i>
+                22 Friends
+            </a>
+        </card-extra>
+        <!--<sm-button class="bottom attached fluid" icon="add">Add friend</sm-button>-->
+  </sm-card-double-image>
+<h4 class="ui header">Code</h4>
+<sm-codeblock smPrismjs="html">
+  &lt;sm-card-double-image class="card" 
+      image="http://semantic-ui.com/images/avatar2/large/kristy.png" 
+      hoverImage="http://www.semantic-ui.cn/images/avatar/large/elliot.jpg">
+        &lt;card-title> Kristy &lt;/card-title>
+        &lt;card-subtitle> Joined in 2013 &lt;/card-subtitle>
+        &lt;card-content>
+            Kristy is an art director living in New York.
+        &lt;/card-content>
+        &lt;card-extra>
+            &lt;a>
+                &lt;i class="user icon">&lt;/i>
+                22 Friends
+            &lt;/a>
+        &lt;/card-extra>
+  &lt;/sm-card-double-image>
+</sm-codeblock>
+<div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
+    <h4 class="ui header">sm-card-ext</h4>
+    <sm-card-ext extra="true" 
+    image="http://semantic-ui.com/images/avatar2/large/kristy.png"
+    hoverImage="http://www.semantic-ui.cn/images/avatar/large/elliot.jpg">
+        <card-title>Kristy</card-title>
+        <card-subtitle>Joined in 2013</card-subtitle>
+        <card-content>Kristy is an art director living in New York</card-content>
+        <card-extra>
+            <a><i class="user icon"></i>22 Brothers</a>
+        </card-extra>
+    </sm-card-ext>
+<h4 class="ui header">Code</h4>
+<sm-codeblock smPrismjs="html">
+    &lt;sm-card-ext extra="true" 
+    image="http://semantic-ui.com/images/avatar2/large/kristy.png"
+    hoverImage="http://www.semantic-ui.cn/images/avatar/large/elliot.jpg">
+        &lt;card-title>Kristy&lt;/card-title>
+        &lt;card-subtitle>Joined in 2013&lt;/card-subtitle>
+        &lt;card-content>Kristy is an art director living in New York&lt;/card-content>
+        &lt;card-extra>
+            &lt;a>&lt;i class="user icon">&lt;/i>22 Brothers&lt;/a>
+        &lt;/card-extra>
+    &lt;/sm-card-ext>
+</sm-codeblock>
 </div>
 `
 })

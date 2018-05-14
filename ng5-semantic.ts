@@ -12,7 +12,12 @@ import { SemanticDropdownComponent } from './src/dropdown/dropdown';
 import { SemanticSelectComponent } from './src/select/select';
 import { SemanticSearchComponent } from './src/search/search';
 import { SemanticLoaderComponent } from './src/loader/loader';
-import { SemanticCardComponent, SemanticCardsComponent, SemanticCard5Component } from './src/card/card';
+import {
+  SemanticCardComponent,
+  SemanticCardsComponent,
+  SemanticCard5Component,
+  SemanticCardDoubleImageComponent
+} from './src/card/card';
 import {
  SemanticInputComponent,
  SemanticTextareaComponent,
@@ -60,6 +65,7 @@ export let SEMANTIC_COMPONENTS: Array<any> = [
  SemanticCardComponent,
  SemanticCardsComponent,
  SemanticCard5Component,
+  SemanticCardDoubleImageComponent,
  SemanticContextMenuComponent,
  SemanticInputComponent,
  SemanticTextareaComponent,

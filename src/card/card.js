@@ -48,6 +48,31 @@ var SemanticCardsComponent = (function () {
     return SemanticCardsComponent;
 }());
 exports.SemanticCardsComponent = SemanticCardsComponent;
+var SemanticCardDoubleImageComponent = (function () {
+    function SemanticCardDoubleImageComponent() {
+    }
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], SemanticCardDoubleImageComponent.prototype, "class", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], SemanticCardDoubleImageComponent.prototype, "image", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], SemanticCardDoubleImageComponent.prototype, "hoverImage", void 0);
+    SemanticCardDoubleImageComponent = __decorate([
+        core_1.Component({
+            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
+            selector: 'sm-card-double-image',
+            template: "<div class=\"ui {{class}}\">\n    <div [class]=\"(imageClass?imageClass: 'ui slide masked reveal image')\"\n     *ngIf=\"image && hoverImage\">\n        <img src=\"{{image}}\" class=\"visible content\">\n        <img src=\"{{hoverImage}}\" class=\"hidden content\">\n    </div>\n    <div class=\"content\">\n        <ng-content select=\"card-title\"></ng-content>\n        <div class=\"meta\">\n            <ng-content select=\"card-subtitle\"></ng-content>\n        </div>\n        <div class=\"description\">\n            <ng-content select=\"card-content\"></ng-content>\n        </div>\n    </div>\n    <div class=\"extra content\">\n        <ng-content select=\"card-extra\"></ng-content>\n    </div>\n    <ng-content></ng-content>\n</div>"
+        })
+    ], SemanticCardDoubleImageComponent);
+    return SemanticCardDoubleImageComponent;
+}());
+exports.SemanticCardDoubleImageComponent = SemanticCardDoubleImageComponent;
 var SemanticCard5Component = (function () {
     function SemanticCard5Component() {
     }
@@ -62,15 +87,11 @@ var SemanticCard5Component = (function () {
     __decorate([
         core_1.Input(),
         __metadata("design:type", String)
-    ], SemanticCard5Component.prototype, "title", void 0);
+    ], SemanticCard5Component.prototype, "hoverImage", void 0);
     __decorate([
         core_1.Input(),
         __metadata("design:type", String)
-    ], SemanticCard5Component.prototype, "subtitle", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], SemanticCard5Component.prototype, "content", void 0);
+    ], SemanticCard5Component.prototype, "imageClass", void 0);
     __decorate([
         core_1.Input(),
         __metadata("design:type", String)
@@ -78,8 +99,8 @@ var SemanticCard5Component = (function () {
     SemanticCard5Component = __decorate([
         core_1.Component({
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-            selector: 'sm-card5',
-            template: "<div class=\"ui {{class}}\">\n    <div class=\"image\" *ngIf=\"image\">\n        <img [src]=\"image\">\n    </div>\n    <div class=\"content\">\n        <div *ngIf=\"title\" [innerHtml]=\"title\"></div>\n        <div class=\"meta\" *ngIf=\"subtitle\" [innerHtml]=\"subtitle\">\n        </div>\n        <div class=\"description\" *ngIf=\"content\" [innerHtml]=\"content\">\n        </div>\n    </div>\n    <div class=\"extra content\" *ngIf=\"extra\" [innerHtml]=\"extra\">\n    </div>\n</div>"
+            selector: 'sm-card-ext',
+            template: "<div [class]=\"'ui ' + (class ? class : 'card')\">\n    <div [class]=\"(imageClass?imageClass: '')+' image'\" *ngIf=\"image && !hoverImage\">\n        <img [src]=\"image\" >\n    </div>\n\n    <div [class]=\"(imageClass?imageClass: 'ui slide masked reveal')+' image'\"\n     *ngIf=\"hoverImage\">\n        <img [src]=\"image\" class=\"visible content\">\n        <img [src]=\"hoverImage\" class=\"hidden content\">\n    </div>\n    <div class=\"content\">\n        <ng-content select=\"card-title\"></ng-content>\n        <div class=\"meta\" >\n          <ng-content select=\"card-subtitle\"></ng-content>\n        </div>\n        <div class=\"description\" >\n          <ng-content select=\"card-content\"></ng-content>\n        </div>\n    </div>\n    <div class=\"extra content\" *ngIf=\"extra\">\n      <ng-content select=\"card-extra\"></ng-content>\n    </div>\n    <ng-content></ng-content>\n</div>"
         })
     ], SemanticCard5Component);
     return SemanticCard5Component;
