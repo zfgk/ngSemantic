@@ -140,6 +140,81 @@ import { Component } from '@angular/core';
 &lt;/sm-cards>
 </sm-codeblock>
 <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
+<h4 class="ui header">Demo sm-card-dimmer</h4>
+<sm-cards class="special">
+    <sm-card-dimmer class="card" 
+          image="http://semantic-ui.com/images/avatar2/large/kristy.png">
+        <dimmer-content>
+            <div class="center">
+                <div class="ui inverted button">Add Friend</div>
+            </div>
+        </dimmer-content>
+        <card-title> Kristy </card-title>
+        <card-subtitle> Joined in 2013 </card-subtitle>
+        <card-extra>
+            <a>
+                <i class="user icon"></i>
+                22 Friends
+            </a>
+        </card-extra>
+        <!--<sm-button class="bottom attached fluid" icon="add">Add friend</sm-button>-->
+    </sm-card-dimmer>
+    <sm-card-dimmer class="card" dimmerClass="inverted"
+            image="http://semantic-ui.com/images/avatar2/large/kristy.png">
+        <dimmer-content>
+            <div class="center">
+                <div class="ui inverted button">Add Friend</div>
+            </div>
+        </dimmer-content>
+        <card-title> Kristy </card-title>
+        <card-subtitle> Joined in 2013 </card-subtitle>
+        <card-extra>
+            <a>
+                <i class="user icon"></i>
+                22 Friends
+            </a>
+        </card-extra>
+        <!--<sm-button class="bottom attached fluid" icon="add">Add friend</sm-button>-->
+    </sm-card-dimmer>
+</sm-cards>
+<h4 class="ui header">Code</h4>
+<sm-codeblock smPrismjs="html">
+&lt;sm-cards class="special">
+    &lt;sm-card-dimmer class="card" 
+          image="http://semantic-ui.com/images/avatar2/large/kristy.png">
+        &lt;dimmer-content>
+            &lt;div class="center">
+                &lt;div class="ui inverted button">Add Friend&lt;/div>
+            &lt;/div>
+        &lt;/dimmer-content>
+        &lt;card-title> Kristy &lt;/card-title>
+        &lt;card-subtitle> Joined in 2013 &lt;/card-subtitle>
+        &lt;card-extra>
+            &lt;a>
+                &lt;i class="user icon">&lt;/i>
+                22 Friends
+            &lt;/a>
+        &lt;/card-extra>
+    &lt;/sm-card-dimmer>
+    &lt;sm-card-dimmer class="card" dimmerClass="inverted"
+            image="http://semantic-ui.com/images/avatar2/large/kristy.png">
+        &lt;dimmer-content>
+            &lt;div class="center">
+                &lt;div class="ui inverted button">Add Friend&lt;/div>
+            &lt;/div>
+        &lt;/dimmer-content>
+        &lt;card-title> Kristy &lt;/card-title>
+        &lt;card-subtitle> Joined in 2013 &lt;/card-subtitle>
+        &lt;card-extra>
+            &lt;a>
+                &lt;i class="user icon">&lt;/i>
+                22 Friends
+            &lt;/a>
+        &lt;/card-extra>
+    &lt;/sm-card-dimmer>
+&lt;/sm-cards>
+</sm-codeblock>
+<div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
 <h4 class="ui header">Demo sm-card-double-image</h4>
   <sm-card-double-image class="card" 
       image="http://semantic-ui.com/images/avatar2/large/kristy.png" 

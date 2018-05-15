@@ -15,8 +15,9 @@ import { SemanticLoaderComponent } from './src/loader/loader';
 import {
   SemanticCardComponent,
   SemanticCardsComponent,
-  SemanticCard5Component,
-  SemanticCardDoubleImageComponent
+  SemanticCardExtComponent,
+  SemanticCardDoubleImageComponent,
+  SemanticCardDimmerComponent
 } from './src/card/card';
 import {
  SemanticInputComponent,
@@ -64,8 +65,9 @@ export * from './src/accordion/accordion';
 export let SEMANTIC_COMPONENTS: Array<any> = [
  SemanticCardComponent,
  SemanticCardsComponent,
- SemanticCard5Component,
+ SemanticCardExtComponent,
   SemanticCardDoubleImageComponent,
+  SemanticCardDimmerComponent,
  SemanticContextMenuComponent,
  SemanticInputComponent,
  SemanticTextareaComponent,

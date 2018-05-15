@@ -1,4 +1,7 @@
-import {Component, Input, ChangeDetectionStrategy, SimpleChanges, ViewContainerRef} from '@angular/core';
+import {
+  Component, Input, ChangeDetectionStrategy, SimpleChanges, ViewContainerRef, OnInit,
+  AfterViewInit
+} from '@angular/core';
 
 /**
  * Implementation of Card collection
@@ -40,12 +43,56 @@ export class SemanticCardComponent {
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'sm-cards',
-  template: `<div class="ui cards {{class}}"><ng-content></ng-content></div>`
+  template: `<div class="ui {{class}} cards"><ng-content></ng-content></div>`
 })
 export class SemanticCardsComponent {
   @Input() class: string;
+
+  ngAfterViewInit(){
+    $('.special.cards .image').dimmer({
+      on: 'hover'
+    });
+  }
 }
 
+
+/**
+ * Implementation of Card collection
+ *
+ * @link http://semantic-ui.com/views/card.html
+ */
+@Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  selector: 'sm-card-dimmer',
+  template: `<div class="ui {{class}}">
+    <div class="blurring dimmable image">
+        <div class="ui dimmer {{dimmerClass}}">
+        <div class="content">
+        <ng-content select="dimmer-content"></ng-content>
+</div>
+</div>
+        <img src="{{image}}" class="" >
+    </div>
+    <div class="content">
+        <ng-content select="card-title"></ng-content>
+        <div class="meta">
+            <ng-content select="card-subtitle"></ng-content>
+        </div>
+    </div>
+    <div class="extra content">
+        <ng-content select="card-extra"></ng-content>
+    </div>
+    <ng-content></ng-content>
+</div>`
+})
+export class SemanticCardDimmerComponent {
+  @Input() class: string;
+  @Input() image: string;
+  @Input() dimmerClass: string;
+
+
+
+}
 
 /**
  * Implementation of Card collection
@@ -115,7 +162,7 @@ export class SemanticCardDoubleImageComponent {
     <ng-content></ng-content>
 </div>`
 })
-export class SemanticCard5Component {
+export class SemanticCardExtComponent {
   @Input() class: string;
   @Input() image: string;
   @Input() hoverImage: string;

@@ -34,6 +34,11 @@ exports.SemanticCardComponent = SemanticCardComponent;
 var SemanticCardsComponent = (function () {
     function SemanticCardsComponent() {
     }
+    SemanticCardsComponent.prototype.ngAfterViewInit = function () {
+        $('.special.cards .image').dimmer({
+            on: 'hover'
+        });
+    };
     __decorate([
         core_1.Input(),
         __metadata("design:type", String)
@@ -42,12 +47,37 @@ var SemanticCardsComponent = (function () {
         core_1.Component({
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
             selector: 'sm-cards',
-            template: "<div class=\"ui cards {{class}}\"><ng-content></ng-content></div>"
+            template: "<div class=\"ui {{class}} cards\"><ng-content></ng-content></div>"
         })
     ], SemanticCardsComponent);
     return SemanticCardsComponent;
 }());
 exports.SemanticCardsComponent = SemanticCardsComponent;
+var SemanticCardDimmerComponent = (function () {
+    function SemanticCardDimmerComponent() {
+    }
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], SemanticCardDimmerComponent.prototype, "class", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], SemanticCardDimmerComponent.prototype, "image", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], SemanticCardDimmerComponent.prototype, "dimmerClass", void 0);
+    SemanticCardDimmerComponent = __decorate([
+        core_1.Component({
+            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
+            selector: 'sm-card-dimmer',
+            template: "<div class=\"ui {{class}}\">\n    <div class=\"blurring dimmable image\">\n        <div class=\"ui dimmer {{dimmerClass}}\">\n        <div class=\"content\">\n        <ng-content select=\"dimmer-content\"></ng-content>\n</div>\n</div>\n        <img src=\"{{image}}\" class=\"\" >\n    </div>\n    <div class=\"content\">\n        <ng-content select=\"card-title\"></ng-content>\n        <div class=\"meta\">\n            <ng-content select=\"card-subtitle\"></ng-content>\n        </div>\n    </div>\n    <div class=\"extra content\">\n        <ng-content select=\"card-extra\"></ng-content>\n    </div>\n    <ng-content></ng-content>\n</div>"
+        })
+    ], SemanticCardDimmerComponent);
+    return SemanticCardDimmerComponent;
+}());
+exports.SemanticCardDimmerComponent = SemanticCardDimmerComponent;
 var SemanticCardDoubleImageComponent = (function () {
     function SemanticCardDoubleImageComponent() {
     }
@@ -73,36 +103,36 @@ var SemanticCardDoubleImageComponent = (function () {
     return SemanticCardDoubleImageComponent;
 }());
 exports.SemanticCardDoubleImageComponent = SemanticCardDoubleImageComponent;
-var SemanticCard5Component = (function () {
-    function SemanticCard5Component() {
+var SemanticCardExtComponent = (function () {
+    function SemanticCardExtComponent() {
     }
     __decorate([
         core_1.Input(),
         __metadata("design:type", String)
-    ], SemanticCard5Component.prototype, "class", void 0);
+    ], SemanticCardExtComponent.prototype, "class", void 0);
     __decorate([
         core_1.Input(),
         __metadata("design:type", String)
-    ], SemanticCard5Component.prototype, "image", void 0);
+    ], SemanticCardExtComponent.prototype, "image", void 0);
     __decorate([
         core_1.Input(),
         __metadata("design:type", String)
-    ], SemanticCard5Component.prototype, "hoverImage", void 0);
+    ], SemanticCardExtComponent.prototype, "hoverImage", void 0);
     __decorate([
         core_1.Input(),
         __metadata("design:type", String)
-    ], SemanticCard5Component.prototype, "imageClass", void 0);
+    ], SemanticCardExtComponent.prototype, "imageClass", void 0);
     __decorate([
         core_1.Input(),
         __metadata("design:type", String)
-    ], SemanticCard5Component.prototype, "extra", void 0);
-    SemanticCard5Component = __decorate([
+    ], SemanticCardExtComponent.prototype, "extra", void 0);
+    SemanticCardExtComponent = __decorate([
         core_1.Component({
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
             selector: 'sm-card-ext',
             template: "<div [class]=\"'ui ' + (class ? class : 'card')\">\n    <div [class]=\"(imageClass?imageClass: '')+' image'\" *ngIf=\"image && !hoverImage\">\n        <img [src]=\"image\" >\n    </div>\n\n    <div [class]=\"(imageClass?imageClass: 'ui slide masked reveal')+' image'\"\n     *ngIf=\"hoverImage\">\n        <img [src]=\"image\" class=\"visible content\">\n        <img [src]=\"hoverImage\" class=\"hidden content\">\n    </div>\n    <div class=\"content\">\n        <ng-content select=\"card-title\"></ng-content>\n        <div class=\"meta\" >\n          <ng-content select=\"card-subtitle\"></ng-content>\n        </div>\n        <div class=\"description\" >\n          <ng-content select=\"card-content\"></ng-content>\n        </div>\n    </div>\n    <div class=\"extra content\" *ngIf=\"extra\">\n      <ng-content select=\"card-extra\"></ng-content>\n    </div>\n    <ng-content></ng-content>\n</div>"
         })
-    ], SemanticCard5Component);
-    return SemanticCard5Component;
+    ], SemanticCardExtComponent);
+    return SemanticCardExtComponent;
 }());
-exports.SemanticCard5Component = SemanticCard5Component;
+exports.SemanticCardExtComponent = SemanticCardExtComponent;
