@@ -98,17 +98,14 @@ import { Component } from '@angular/core';
 <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
 <h4 class="ui header">Demo attached button without image</h4>
 <sm-cards>
-    <div class="card">
-    <sm-card-ext >
+    <sm-card-ext class="card" extra="true">
             <card-title> Kristy </card-title>
             <card-subtitle> Joined in 2013 </card-subtitle>
             <card-content>
                 Kristy is an art director living in New York.
             </card-content>
             <sm-button class="bottom attached fluid" icon="add">Add friend</sm-button>
-
     </sm-card-ext>
-</div>
 
     <sm-card class="card">
         <card-title> Kristy </card-title>
@@ -122,6 +119,16 @@ import { Component } from '@angular/core';
 <!--</div>-->
 <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
+&lt;sm-cards>
+    &lt;sm-card-ext class="card" extra="true">
+            &lt;card-title> Kristy &lt;/card-title>
+            &lt;card-subtitle> Joined in 2013 &lt;/card-subtitle>
+            &lt;card-content>
+                Kristy is an art director living in New York.
+            &lt;/card-content>
+            &lt;sm-button class="bottom attached fluid" icon="add">Add friend&lt;/sm-button>
+    &lt;/sm-card-ext>
+
     &lt;sm-card class="card">
         &lt;card-title> Kristy &lt;/card-title>
         &lt;card-subtitle> Joined in 2013 &lt;/card-subtitle>
@@ -130,6 +137,7 @@ import { Component } from '@angular/core';
         &lt;/card-content>
         &lt;sm-button class="bottom attached fluid" icon="add">Add friend&lt;/sm-button>
     &lt;/sm-card>
+&lt;/sm-cards>
 </sm-codeblock>
 <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
 <h4 class="ui header">Demo sm-card-double-image</h4>
